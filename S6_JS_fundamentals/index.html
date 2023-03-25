@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String In JS</title>
+</head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    hr {
+        width: 80%;
+    }
+
+</style>
+<body>
+    <h1>Strings in JS</h1>
+    <hr/>
+
+    <script>
+        // Defining string 
+        let str1 = "test text for string."
+        +"test text for string 2"
+        +"test text for string 3"
+
+        str1 +="est text for string 4"
+        str1 +="est text for string 5"
+        
+        // Defing Using Template Literatal
+        let str2 =`test text for string, test text for string 2, test text for strig 3`
+
+        // special characters to highlight
+        str1 = "this is \"highlight\" word"
+        str1 = 'this is "highlight" word'
+        str2 = "this is\"highlight\" word"
+
+        // console.log("str1: ", str1, "str2: ", str2,)
+
+        // string on new line
+            str1 =  "hello, \nthis is string session."
+
+            console.log("str1: ", str1)
+
+            // string with tab
+            str1 = 'hello, \this is string with tab.'
+
+            console.log("str1: ", str1)
+        </script>
+<!-- String Method -->
+<!-- It converts any data type to string by using String constructor -->
+        <script>
+            // string typing and conversion for num
+            let someValue = 123
+
+            someValue = String(someValue) //<--String Converter using string method
+
+            someValue = someValue + "" //<--String Converter by adding to empty string
+
+            someValue + `${someValue}` //<--String Converter by using template literal
+
+            console.log(" type some value :  147"), typeof someValue, someValue
+
+            // string typing and conversion for undefined using strinf method and add empty string
+            let someValue2 = String(undefined)
+            someValue2 = undefined + "258"
+            console.log(" type of undefined : ", typeof someValue2, someValue2)
+
+            // string typing and conversion for null using string method
+            let someValue3 = String(null)
+            console.log(" type of null : ", typeof someValue3)
+
+            // string typing and conversion for boolean using string method
+            let someValue4 = String(true)
+            console.log(" type of boolean : ", typeof someValue4)
+
+        </script>
+
+        <script>
+             //Sepapration Of String
+
+            str1 = "hello world"
+
+            console.log("char at index 2:", str1.charAt(2))
+            // console.log("char at index 2:", str1[2]) //Directly giving array index
+            //^^-- This right here will give you the character at given index
+
+            // get sub string from a string by using slice
+            str2 = str1.slice(1, 5)
+
+            console.log(" sliced string : ", str2)
+
+            // Split
+            str1 = "This is how Lengends are made."
+            str2 = str1.split("e")
+
+            console.log(" split string : ",str2)
+
+            // Join
+            str1 = str2.join("i")
+
+            console.log(" join string : ", str1)
+
+        </script>
+
+        <script>
+            str1 = "hello world"
+
+            console.log(" sub string exists : ", str1.includes(" world"))
+
+            str1 += "world"
+            str2 = str1.indexOf("world")
+
+            console.log(" index of sub string : ", str2)
+        </script>
+
+</body>
+</html>

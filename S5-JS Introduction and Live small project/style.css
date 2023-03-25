@@ -1,0 +1,106 @@
+/* Clock and Face */
+
+.clock {
+    background-position: center;
+    background-size: contain;
+    width: 30rem;
+    height: 30rem;
+    border: 15px solid rgb(22, 26, 85);
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(./assets/images/design.png);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+
+}
+
+.clock-face{
+   
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+/* .hand{ */
+    /* margin-top: 2px; */
+    /* width: 50%;
+    height: 9px;
+    background-color: aquamarine;
+    position: absolute;
+    top:50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.1s; */
+    
+/* } */
+
+.second-hand{
+    width: 50%;
+    height: 9px;
+    background-color: rgb(211, 0, 253);
+    position: absolute;
+    top:50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 1s;
+    height: 3px;
+}
+
+.min-hand{
+    width: 35%;
+    height: 6px;
+    left: 15%;
+    background-color: rgb(255, 0, 0);
+    position: relative;
+    top:50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.5s;
+    
+}
+
+.hour-hand{
+    width: 25%;
+    height: 8px;
+    left: 25%;
+    background-color: #15F2FD;
+    position: absolute;
+    top:50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.5s;
+    
+}
+
+.no-transition {
+    transition: none;
+}
+
+/* Heading and Page */
+
+html,body{
+    margin: 0;
+    padding:0;
+}
+
+html {
+    background: url(./assets/images/aleksandr-popov-5tsvxCrFi_I-unsplash.jpg);
+    background-size: cover ;
+}
+
+h1 {
+    text-align: center;
+    color:rgb(255, 255, 255);
+    margin:1rem auto;
+    font-family: sans-serif;
+}
+
+hr {
+    width: 80%;
+    margin:1rem auto;
+   
+}

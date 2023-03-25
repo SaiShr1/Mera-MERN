@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media quries</title>
+    <!-- <link rel="stylesheet" href="S4 Index.css" /> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+
+        header {
+            padding: 1rem;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        .nav-item {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                /* background: blue; */
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            body{
+                background: purple; 
+            }
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Media Quries</h1>
+        <nav>
+            <div class="nav-item">Link</div>
+            <div class="nav-item">Link</div>
+            <div class="nav-item">Link</div>
+            <div class="nav-item">Link</div>
+            <div class="nav-item">Link</div>
+            <div class="nav-item">Link</div>
+            <div class="nav-item">Link</div>
+
+        </nav>
+    </header>
+
+
+</body>
+
+</html>

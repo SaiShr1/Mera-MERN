@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    background: rgb(154, 240, 240);
+    text-align: center;
+    display: flex;
+    
+}
+
+header h1{
+    color: #2b9c76;
+    font-size: 200%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+header nav {
+    margin: 0px;
+    display: flex;
+    /* flex-direction: row; */
+    /* row-gap: 10px; */
+    background: inherit;
+    padding: 10px 0px;
+    
+}
+
+header nav div {
+    padding: 0px 50px;
+    /* height: auto; */
+    display: flex;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav div a {
+    color: rgb(13, 95, 68);
+    font-weight:400; 
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+nav div a:hover{
+    color:rgb(238, 218, 103)
+}
+
+/*Session 4*/
+/* Main Body */
+.container {
+    border: 1px solid black;
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+}
+
+.container div {
+     border:1px red;
+     width:100% ;
+     padding: 1px;
+     height: 65vh;
+}
+
+.main-content div {
+    overflow-y: scroll;
+    border: 2px solid purple;
+    width: auto;
+    height: 50vh;
+}
+
+.side-content {
+    border-left: 10px solid grey;
+}
+
+.side-containt ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.side-content ul li {
+    list-style: none;
+    text-align: center;
+    margin: 5px 0px;
+    margin-bottom: 10px;
+    padding: auto;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    border: 1px solid black;
+    padding: 5px 5px 0px;
+    background-color: bisque;
+}
+
+footer div {
+    width: auto;
+}
+
+footer div p {
+    color: crimson;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0px 100px;
+    text-align: center;
+    /* height: 30px;
+    width: 10px;*/
+} 
+
+#contact {
+    float:left;
+}
+
+#product {
+    float: left;
+}
+
+#Newsletter {
+    float: left;
+}
+
+#footer-title {
+    background-color: blanchedalmond;
+    clear: both;
+    padding: auto;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#footer-title h5 {
+    margin: 0;
+}
+

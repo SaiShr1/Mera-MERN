@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    hr {
+        width: 80%;
+    }
+</style>
+
+<body>
+    <h1>Oject in JS</h1>
+    <hr>
+
+    <script>
+        // what is object
+
+        let myObj = {
+            prop: "value1",
+            field: "value2",
+            key: "value3"
+        }
+
+        // access the objects
+        console.log(" object access : ", myObj.prop, myObj.field)
+
+        // add new property in the obj
+        myObj.newProp = "newValue"
+
+        console.log(" access new value : ", myObj.newProp)
+
+        // Different ways to access and add values 
+        console.log(" object access 2 : ", myObj["key"])
+
+        myObj["newProp2"] = "newValue"
+
+        console.log(" access new value 2 : ", myObj["newProp2"])
+
+        // ^^this method of using [] in myObj["key3"] is helpful in dynamic creation of object
+
+        for (let index = 0; index < 5; index++){
+            myObj[index] = "value_" + index
+        }
+
+        console.log(" dynamic object : ", myObj)
+
+        const idx = 3
+
+        console.log(" index access : ", myObj[idx])
+
+        // get only keys
+        const keys = Object.keys(myObj)
+
+        console.log(" keys of object : ", keys)
+
+        keys.forEach(function(property) {
+            console.log(myObj[property])
+        })
+
+        // get only values
+        const values = Object.values(myObj)
+        console.log(myObj["values"])
+    
+    </script>
+
+</body>
+</html>

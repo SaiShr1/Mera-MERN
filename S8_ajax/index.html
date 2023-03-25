@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX</title>
+</head>
+
+<body>
+    <div id="products">
+
+    </div>
+
+    <script>
+        const httpRequest = new XMLHttpRequest()
+        const productsDiv = document.querySelector("#products")
+
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState === XMLHttpRequest.DONE)
+                if (httpRequest.status === 200){
+                    alert(httpRequest.statusText)
+                    const productsArr = JSON.parse(httpRequest.responseText.toString())
+                    console.log("response : ", productsArr)
+
+                    productsArr.map(function(prod) {
+                        productsDiv.appendChild(createProductElement(prod))
+                    })
+
+                }
+                else
+                    alert("some error occured")
+        }
+
+        httpRequest.open("GET", "https://fakestoreapi.com/products")
+
+        httpRequest.send()
+
+        function createProductElement(prod){
+            const prodDiv = document.createElement("div")
+
+            prodDiv.innerHTML = `
+            <h1>${prod.title}</h1>
+            <img src="${prod.image}" height="100px" />
+            <p>${prod.description}</p>
+            <h3>Rs. ${prod.price}</h3>
+            `
+            return prodDiv
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+/*NEWSLETTER*/
+
+.Newsletter {
+    margin: auto;
+    height: 50vh;
+    border: 1px solid black;
+    border-top: 1rem solid lavender;
+    border-bottom: 1rem solid grey;
+    padding: 10px;
+}
+
+.Newsletter div h3 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.Newsletter div form {
+     width: 300px;
+}
+
+form div {
+    margin: 10px 0;
+}
+
+label {
+    padding: 10px;
+    width: 100%;
+    font-size:16px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-bottom: 10px;
+
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+}
+
+#button {
+    background-color: blue;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+
+}
