@@ -21,7 +21,7 @@ const server = http.createServer(function (request, response) {
 
     console.log("---methods---", request.method)
 
-    if(request.method === "GET" && paths[1] === "users" && paths.lenght === 2) {
+    if(request.method === "GET" && paths[1] === "users" && paths.length === 2) {
         response.write(JSON.stringify(Users))
     } 
     else if(request.method === "GET" && paths[1] === "users" && paths[2]) {
@@ -33,6 +33,7 @@ const server = http.createServer(function (request, response) {
             response.write("User Not Found")
         }
     }
+
     else if (request.method === "POST" && paths[1] === "users") {
         let data = ""
 
@@ -49,6 +50,26 @@ const server = http.createServer(function (request, response) {
         response.statusCode = 201
         response.write("User Created")
     }
+
+    else if (request.method === "POST" && paths[1] === "users") {
+        let data = ""
+
+        request.on("data", function (chunks) {
+            data += chunks
+        })
+
+        request.on("end", function () {
+            const obj = JSON.parse(data.toString())
+            Users.push(obj)
+        
+        })
+
+        response.statusCode = 201
+        response.write("User Created")
+    }
+
+    
+
     else {
         response.write("Not Found")
     }
